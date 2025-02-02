@@ -2,7 +2,7 @@
 
 FROM node:18
 
-WORKIR /app
+WORKDIR /app
 
 COPY package*.json ./
 RUN npm install
@@ -10,4 +10,4 @@ RUN npm install
 COPY . ./
 
 EXPOSE 5003
-CMT ["node", "server.js"]
+CMD ["node", "server.js"]
