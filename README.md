@@ -18,23 +18,20 @@ To start the server, use the following command:
 node server.js
 ```
 
-## Endpoints
+## Running with Docker
 
-* "GET" /tasks - Get list of tasks
-* "GET" /tasks/:id - Get a single task
-* "POST" /tasks - Create a new task
-* "PUT" /tasks/:id - Update a task
-* "DELETE(" /tasks/:id - Remove a task
+To run the application with Docker, use the following command:
 
-## Configuration
-
-Create a `.env`` file and add your MongoDB URI.:
-
-This is using a MongoDB cluster (change the uri):
-```
-process.env.TASK_MONGO_URI = "mongodb://localhost/be-todo"
+```sh
+docker-compose up  -d`
 ```
 
-## License
+Which will start the backend and MongoDB in containers. The application will be available on localhost:5000.
 
-Released under MIT license.
+You can stop all containers using:
+
+```sh
+docker-compose down
+```
+
+This will shotdown all containers and release resources.
