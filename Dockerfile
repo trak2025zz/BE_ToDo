@@ -2,7 +2,7 @@
 
 FROM node:18
 
-WORDIR /app
+WORKIR /app
 
 COPY package*.json ./
 RUN npm install
